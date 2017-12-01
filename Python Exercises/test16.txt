@@ -1,0 +1,3 @@
+python ex17.py test17-1.txt test17-2.txt
+
+
