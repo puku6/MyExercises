@@ -121,7 +121,7 @@ class Room(object):
 				print "The 'enter' command is used to navigate around the house. "
 				print "If u want to enter a room, type it in like 'enter diningroom'."
 				print " All rooms have to be written in one word, the only exception "
-				print "being the two living rooms: They have to be typed in like this: "
+				print "being the two livingroomss: They have to be typed in like this: "
 				print "'enter livingroom 1' or 'enter livingroom 2'."
 			elif 'talk to' in choice: 
 				print "The 'talk to' command is used to communicate with other people inside the house."
@@ -150,7 +150,7 @@ class Room(object):
 				print "The '/' symbol marks doors you can pass."
 			elif 'room' in choice: 
 				print "All rooms have to be written in one word and all lowercase, the only exception "
-				print "being the two living rooms: They have to be typed in like this: "
+				print "being the two livingroomss: They have to be typed in like this: "
 				print "'enter livingroom 1' or 'enter livingroom 2'."
 			elif 'floor' in choice: 
 				print "To use the stairs, you have to be in one of the games corridors. "
@@ -290,7 +290,7 @@ class EntranceCorridor(Room):
 		print "You are standing in a big hallway with several doors. There are also two stairways, "
 		print "one leading up into the first floor and the other one down into the basement. "
 		print "The doors seem to lead into a livingroom, a WC, an office, "
-		print "a dining room with an attached kitchen and a second livingroom. "
+		print "a diningroom with an attached kitchen and a second livingroom. "
 		print "Where do you want to go?"
 		choice = raw_input(prompt)
 		if choice == 'enter livingroom 1':
@@ -393,7 +393,7 @@ class Livingroom1EG(Room):
 	def enter(self):
 		inp_room = 'livingrm1_eg'
 		global key_pickup
-		print "You enter the living room near the entrance."
+		print "You enter the livingrooms near the entrance."
 		print "You can see a picture hanging from the wall,"
 		print "a couch, a big chandelier and the son of the victim"
 		print "standing next to the window."
@@ -475,7 +475,7 @@ class DiningroomEG(Room):
 	def enter(self):
 		inp_room = 'diningrm_eg'
 		global video_pickup
-		print "As you step inside the dining room you see a large table"
+		print "As you step inside the diningroom you see a large table"
 		print "with many chairs, a hutch in the corner and a door leading into the kitchen. "
 		print "What do you want to do?"
 		choice = raw_input(prompt)
@@ -582,7 +582,7 @@ class Livingroom2EG(Room):
 
 	def enter(self):
 		inp_room = 'livingrm2_eg'
-		print "You enter the second living room. "
+		print "You enter the second livingrooms. "
 		print "Inside you meet the victims buisness partner. "
 		print "Other than him you see a painting, a couch and an armchair. "
 		print "What do you want to do?"
@@ -717,8 +717,8 @@ class CorridorBasement(Room):
 
 	def enter(self):
 		inp_room = 'corridor_bs'
-		print "In the basement corridor you can see three doors leading into a laundry room,"
-		print "a sauna and a storage room. Where do you want to go?"
+		print "In the basement corridor you can see three doors leading into a laundryroom,"
+		print "a sauna and a storageroom. Where do you want to go?"
 		choice = raw_input(prompt)
 		if choice == "enter laundryroom":
 			return 'laundry_bs'
@@ -737,7 +737,7 @@ class LaundryBasement(Room):
 
 	def enter(self):
 		inp_room = 'laundry_bs'
-		print "You enter the laundry room, where you meet the upset charlady."
+		print "You enter the laundryroom, where you meet the upset charlady."
 		print "She is kneeling next to the dead body and can't help but cry."
 		print " Other then her and the body, there is a washing machine and the"
 		print "cabinet in which the body has been found."
@@ -763,7 +763,7 @@ class LaundryBasement(Room):
 			print "You ask the charlady how and when exactly she found the body. "
 			print "She tells you that she found it this morning around 9am when "
 			print "she came to clean the house. She emptied the letter box, "
-			print "sorted everything that was lying around and went to the laundry room "
+			print "sorted everything that was lying around and went to the laundryroom "
 			print "to get her cleaning supplies. As she opened the cabinet, "
 			print "the dead body just fell out of it. It took her about 10 minutes "
 			print "to recover from the shock. After that, she immediatly called the police. "
@@ -887,7 +887,7 @@ class Storage1Basement(Room):
 		global poison_pickup
 		global flashlight_on
 		if flashlight_on == False:
-			print "You enter the storage room and "
+			print "You enter the storageroom and "
 			print "notice that the light is broken. You can't see anything."
 			print "What do you do?"
 			choice = raw_input()
