@@ -121,7 +121,7 @@ class Room(object):
 				print "The 'enter' command is used to navigate around the house. "
 				print "If u want to enter a room, type it in like 'enter diningroom'."
 				print " All rooms have to be written in one word, the only exception "
-				print "being the two livingroomss: They have to be typed in like this: "
+				print "being the two livingrooms: They have to be typed in like this: "
 				print "'enter livingroom 1' or 'enter livingroom 2'."
 			elif 'talk to' in choice: 
 				print "The 'talk to' command is used to communicate with other people inside the house."
@@ -150,7 +150,7 @@ class Room(object):
 				print "The '/' symbol marks doors you can pass."
 			elif 'room' in choice: 
 				print "All rooms have to be written in one word and all lowercase, the only exception "
-				print "being the two livingroomss: They have to be typed in like this: "
+				print "being the two livingrooms: They have to be typed in like this: "
 				print "'enter livingroom 1' or 'enter livingroom 2'."
 			elif 'floor' in choice: 
 				print "To use the stairs, you have to be in one of the games corridors. "
