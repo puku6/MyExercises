@@ -32,7 +32,27 @@ def test_map():
 	assert_equal(start.go('down').go('up'), start)
 	
 def test_gothon_game_map():
-	assert_equal(START.go('shoot!'), generic_death)
-	assert_equal(START.go('dodge!'), generic_death)
-	room = START.go('tell a joke')
-	assert_equal(room, laser_armory)
+	assert_equal(START, welcome_screen)
+	assert_equal(START.go('abc').go('joke').go('lwa'), laser_weapon_armory)
+	assert_equal(START.go('*').go('punch').go('*'), generic_death)
+	assert_equal(START.go('*').go('joke').go('lwa').go('3-1-2').go('*').go('lwa'), laser_weapon_armory_alt)
+	assert_equal(START.go('*').go('joke').go('bridge').go('sing').go('*').go('leave').go('bridge'), the_bridge_alt)
+def test_gothon_game_flags():
+	item = START.go('*').go('joke').go('lwa').go('3-1-2').go('*')
+	assert_equal(inventory, ['bomb'])
+	
+	item2 = START.go('*').go('joke').go('bridge').go('sing').go('*').go('place bomb')
+	assert_equal(inventory, [])
+	assert_equal(item2, the_bridge_no_bomb )
+	
+	item3 = START.go('*').go('joke').go('lwa').go('3-1-2').go('*').go('bridge').go('sing').go('*').go('place bomb')
+	assert_equal(inventory, []) 
+	assert_equal(item3, the_bridge_bomb)
+	
+	item4 = START.go('*').go('joke').go('lwa').go('3-1-2').go('*').go('bridge').go('sing').go('*').go('place bomb').go('*').go('lwa')
+	assert_equal(item4, laser_weapon_armory_alt)
+	assert_equal(inventory, [])
+	
+	item5 = START.go('*').go('joke').go('lwa').go('3-1-2').go('*').go('bridge').go('sing').go('*').go('place bomb').go('*').go('pods').go('2')
+	assert_equal(item5, the_end_winner)
+	

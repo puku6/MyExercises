@@ -22,7 +22,7 @@ def count():
     session.pop('count') # remove ‘count’ from the session
     return "Your session was reset."
 
- app.secret_key = 'replace this with your secret key' # used by Flask to encrypt the session id 
+ app.secret_key = 'qwertzuiop' # used by Flask to encrypt the session id 
 
 if __name__ == "__main__":
     app.run()

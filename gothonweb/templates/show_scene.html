@@ -6,8 +6,43 @@
   <pre>{{ scene.description }}</pre>
   {% if scene.urlname == "death" %}
     <p><a href="/">Play Again?</a></p>
+  {% elif scene.urlname == "welcome_screen" 
+  or scene.urlname == "laser_weapon_armory_box_open" 
+  or scene.urlname == "the_bridge_live"
+  or scene.urlname == "the_bridge_live" 
+  or scene.urlname == "the_bridge_no_bomb"
+ %}
+    <p>	
+      <form action="/game" method="POST">
+		<button type="submit" name="userinput" value="abc">Okay</button>
+      </form>
+    </p>
+  {% elif scene.urlname == "central_corridor" %}
+    <p>	
+      <form action="/game" method="POST">
+		<button type="submit" name="userinput" value="talk">Try some small talk</button> <br>
+		<button type="submit" name="userinput" value="joke">Tell a short joke</button><br>
+		<button type="submit" name="userinput" value="punch">Sucker punch that douche!</button><br>
+      </form>
+  {% elif scene.urlname == "central_corridor_alt" %}
+    <p>	
+      <form action="/game" method="POST">
+		<button type="submit" name="userinput" value="lwa">Laser Weapon Armory</button> <br>
+		<button type="submit" name="userinput" value="bridge">Bridge</button><br>
+		<button type="submit" name="userinput" value="pods">Escapepods</button><br>
+      </form>
+    </p>
+  {% elif scene.urlname == "the_bridge" %}
+    <p>	
+      <form action="/game" method="POST">
+		<button type="submit" name="userinput" value="sing">Sing a lullaby</button> <br>
+		<button type="submit" name="userinput" value="tell">Tell him that he has beautiful eyes</button><br>
+		<button type="submit" name="userinput" value="insult">Insult his mother</button><br>
+      </form>
+    </p>
   {% else %}
     <p>
+	
       <form action="/game" method="POST">
         What do you do? <input type="text" name="userinput"> <input type="SUBMIT">
       </form>
